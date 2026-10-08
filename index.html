@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Madrid Auctions</title>
+  <meta name="description" content="Madrid auction catalogue">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./">MADRID<span>AUCTIONS</span></a>
+    <div id="updated" class="updated">Loading catalogue…</div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">VIASUBASTA · MADRID</p>
+      <h1>Madrid auctions</h1>
+      <p class="intro">Search and compare current auction listings, photos and prices.</p>
+    </div>
+    <div class="stats">
+      <strong id="count">0</strong>
+      <span>auctions</span>
+    </div>
+  </section>
+
+  <section class="controls">
+    <input id="search" type="search" placeholder="Search title or reference…">
+    <select id="status">
+      <option value="">All status</option>
+      <option value="active">Active</option>
+      <option value="upcoming">Upcoming</option>
+      <option value="not_seen">Not seen</option>
+    </select>
+    <input id="minPrice" type="number" min="0" placeholder="Min €">
+    <input id="maxPrice" type="number" min="0" placeholder="Max €">
+    <select id="sort">
+      <option value="newest">Newest</option>
+      <option value="price-low">Price: low → high</option>
+      <option value="price-high">Price: high → low</option>
+      <option value="reference">Reference</option>
+    </select>
+  </section>
+
+  <div id="error" class="error hidden"></div>
+  <section id="grid" class="grid"></section>
+</main>
+
+<footer>
+  <div class="container">
+    Data sourced from the public Viasubasta Madrid catalogue.
+    <span id="footerUpdated"></span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
